@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./css/qrcode.css" />
+  <title>VaultKey</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="modal">
+      <div class="modalplus">
+        <div class="plus">
+          <button id="clousemidal" class="btn">
+            <svg width="45px" height="auto" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#1c71d8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect x="0" fill="none" width="20" height="20"></rect><g><path d="M14.95 6.46L11.41 10l3.54 3.54-1.41 1.41L10 11.42l-3.53 3.53-1.42-1.42L8.58 10 5.05 6.47l1.42-1.42L10 8.58l3.54-3.53z"></path></g></g></svg>
+          </button>
+        </div>
+        <div class="logo">
+          <img src="https://i.postimg.cc/zvTqf9xz/logo.png" alt="Logo" class="srclogo">
+        </div>
+      </div>
+      <hr class="line">
+      <div class="qr">
+        <div class="qrloadoage">
+          <div class="loaderqr">
+            <div class="qrbox">
+              <img src="" id="qrcodeImg" class="qrcodeimg" alt="">
+            </div>
+            <div style="margin-bottom: 20px;"></div>
+            <div class="addqrcode">
+              <label for="fileInput" class="file-trigger">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19M5 12H19" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="addqrtext">Add QR Code</span>
+              </label>
+              <input type="file" id="fileInput" accept="image/*" class="inputfile">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/vk_otp.js"></script>
+  <script src="./js/vk_ui.js"></script>
+  <script src="./js/vk_clip.js"></script>
+  <script src="./js/vk_find.js"></script>
+  <script defer src="vk_openqr.js"></script>
+  <script src="./js/jsQR.js"></script>
+  <script src="./js/vk_scanner.js"></script>
+</body>
+</html>

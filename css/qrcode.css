@@ -1,0 +1,204 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+body { margin: 0; background: #FFFFFF; color: #0b0f17; }
+html, body { overflow: scroll; overflow-x: hidden; }
+
+
+.wrap { width: 400px; min-height: 400px; height: 555px; padding: 12px; }
+.wrap {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrap::-webkit-scrollbar {
+  display: none; /* Chrome, Edge */
+}
+
+.logoplus {
+  display: flex;
+  justify-content: space-between;
+}
+.srclogo {
+  width: 60px;
+  height: auto;
+
+}
+.savecode {
+  margin-left: 10px;
+}
+.namecodetext {
+  font-size: 17px;
+  font-weight: 500;
+}
+.savecodetext {
+  color: #1c71d8;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.codeselector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.roundtime {
+  width: 30px;
+  height: 30px;
+  background: #1c71d8;
+  border-radius: 50%;  
+  margin-right: 15px;
+}
+.line {
+    display: block;           /* Линия достойно занимает своё место */
+    height: 1px;              /* Деликатный акцент для разделения */
+    border: none;             /* Отсутствие рамок упрощает визуальную часть */
+    border-top: 1px solid #ccc; /* Внимание концентрируется на верхней границе */
+    margin: 1em 0;            /* Дарим пространство сверху и снизу */
+    padding: 0;               /* Избегаем лишнего объёма */
+}
+.btn {
+  border: none;              /* Убираем границу */
+  background: none !important;    /* Убираем фон */
+  padding: 0;                /* Убираем внутренние отступы */
+  margin: 0;                 /* Убираем внешние отступы */
+  font: inherit;             /* Наследуем шрифт родителя */
+  color: inherit;            /* Наследуем цвет текста родителя */
+  cursor: pointer;           /* Возвращаем курсор-руку */
+  line-height: normal;
+}
+/* Поисковая строка с иконкой: */
+.search-container {
+  position: relative;
+  width: 100%;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px; /* Отступ слева для иконки */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.modal {
+  display: block; /* Скрываем модальное окно по умолчанию */
+  position: fixed; /* Фиксированное позиционирование */
+  z-index: 10; /* Поверх всего остального */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включаем прокрутку, если контент больше окна */
+  background-color: white; /* Полупрозрачный черный фон */
+}
+.line {
+    display: block;           /* Линия достойно занимает своё место */
+    height: 1px;              /* Деликатный акцент для разделения */
+    border: none;             /* Отсутствие рамок упрощает визуальную часть */
+    border-top: 1px solid #ccc; /* Внимание концентрируется на верхней границе */
+    margin: 1em 0;            /* Дарим пространство сверху и снизу */
+    padding: 0;               /* Избегаем лишнего объёма */
+    margin-top: 8px;
+}
+.modalplus {
+  display: flex;
+  justify-content: space-between;
+}
+.qr {
+  width: 100vw;
+  height: 300px;
+  border-radius: 10px;
+}
+.qrloadoage {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loaderqr {
+  display: grid;
+  justify-items: center;
+}
+.qrbox {
+  margin-top: -50px;
+  border: 1px solid #1c71d8; 
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+.qrcodeimg {
+  width: 100%;
+  height: 100%;
+}
+.addqrcode {
+  width: 65%;
+  height: 50px;
+  background: #1c71d8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.addqrcode:hover {
+  background: #1558a8;
+}
+
+.inputfile {
+  display: none;
+}
+
+.file-trigger {
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+}
+.addqrtext {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+/* КОНЕЦ МОДАЛЬНОГО ОКНА */
+.lbl { display:block; font-size: 12px; opacity: .85; margin: 10px 0 6px; }
+.inp, .ta {
+  width: 100%; box-sizing: border-box;
+  background: #131b2b; color: #e9eefc;
+  border: 1px solid #23314d; border-radius: 10px;
+  padding: 10px; outline: none;
+}
+.ta { min-height: 70px; resize: vertical; }
+
+.row { display:flex; gap: 8px; margin-top: 10px; }
+.btn {
+  flex: 1; border: 0; border-radius: 10px;
+  padding: 10px; cursor: pointer;
+  background: #2a6bff; color: white; font-weight: 600;
+}
+.btn2 { background: #2a3247; }
+.btn3 { flex: 0; padding: 8px 10px; background:#1f2b46; }
+
+.card {
+  margin-top: 12px;
+  background: #0f1626; border: 1px solid #23314d;
+  border-radius: 14px; padding: 12px;
+}
+.code { font-size: 34px; letter-spacing: 2px; font-weight: 800; text-align: center; }
+.subrow { display:flex; justify-content: space-between; align-items: center; margin-top: 10px; gap: 10px; }
+.timer { font-size: 12px; opacity: .9; }
+.hint { margin-top: 8px; font-size: 12px; opacity: .85; min-height: 16px; }
+.foot { margin-top: 10px; font-size: 11px; opacity: .6; }

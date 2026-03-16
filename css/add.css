@@ -1,0 +1,120 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+body { margin: 0; background: #FFFFFF; color: #0b0f17; }
+.wrap { width: 320px; padding: 12px; }
+.logoplus {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.srclogo {
+  width: 45px;
+  height: auto;
+
+}
+.savecode {
+  margin-left: 10px;
+}
+.namecodetext {
+  font-size: 17px;
+  font-weight: 500;
+}
+.savecodetext {
+  color: #1c71d8;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.codeselector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.roundtime {
+  width: 30px;
+  height: 30px;
+  background: #1c71d8;
+  border-radius: 50%;  
+  margin-right: 15px;
+}
+.line {
+    display: block;           /* Линия достойно занимает своё место */
+    height: 1px;              /* Деликатный акцент для разделения */
+    border: none;             /* Отсутствие рамок упрощает визуальную часть */
+    border-top: 1px solid #ccc; /* Внимание концентрируется на верхней границе */
+    margin: 1em 0;            /* Дарим пространство сверху и снизу */
+    padding: 0;               /* Избегаем лишнего объёма */
+}
+.btn {
+  border: none;              /* Убираем границу */
+  background: none !important;    /* Убираем фон */
+  padding: 0;                /* Убираем внутренние отступы */
+  margin: 0;                 /* Убираем внешние отступы */
+  font: inherit;             /* Наследуем шрифт родителя */
+  color: inherit;            /* Наследуем цвет текста родителя */
+  cursor: pointer;           /* Возвращаем курсор-руку */
+  line-height: normal;
+}
+.inputname {
+  font-weight: 450;
+  color: black;
+  font-size: 15px;
+  border: 1px solid #23314d; border-radius: 10px;
+  width: 100%; box-sizing: border-box;
+  padding: 10px; outline: none;
+  background-color: white;
+
+}
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+.ta { 
+  font-weight: 450;
+  color: black;
+  font-size: 15px;
+  border: 1px solid #23314d; border-radius: 10px;
+  width: 100%; box-sizing: border-box;
+  padding: 10px; outline: none;
+  background-color: white;
+  min-height: 70px; 
+  resize: vertical; 
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.logotext {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c71d8;
+  font-style: Noto Sans, sans-serif;
+
+}
+.lbl { display:block; font-size: 14px; opacity: .85; font-weight: 400; margin: 10px 0 6px; }
+
+.row { display:flex; gap: 8px; margin-top: 10px; }
+.btnn {
+  flex: 1; border: 0; border-radius: 10px;
+  padding: 10px; cursor: pointer;
+  background: #2a6bff; color: white; font-weight: 600;
+}
+.btn2 { background: #2a3247; }
+.btn3 { flex: 0; padding: 8px 10px; background: none !important;  }
+
+.card {
+  margin-top: 12px;
+  background: white; border: 1px solid #23314d;
+  border-radius: 14px; padding: 12px;
+}
+.textupdate {
+  font-size: 15px;
+  font-weight: 300;
+  
+}
+.code { color: #1c71d8; font-size: 34px; letter-spacing: 2px; font-weight: 800; text-align: center; }
+.subrow { display:flex; justify-content: space-between; align-items: center; margin-top: 10px; gap: 10px; }
+.timer { font-size: 12px; opacity: .9; }
+.hint { margin-top: 8px; font-size: 12px; opacity: .85; min-height: 16px; }
+.foot { margin-top: 10px; font-size: 11px; opacity: .6; }

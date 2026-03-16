@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security Warning</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #121213;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+.bg-warning {
+  position: fixed;
+  color: red;
+  font-size: 60px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(-20deg);
+  animation: flash 2s forwards;
+  z-index: 0;
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  30% { opacity: 0.25; }
+  70% { opacity: 0.25; }
+  100% { opacity: 0; }
+}
+
+.card {
+  position: relative;
+  z-index: 5;
+}
+
+
+
+    .card {
+      background: white;
+      padding: 40px 36px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      max-width: 440px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 52px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      color: #c0392b;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .url-box {
+      background: #fff5f5;
+      border: 1px solid #f5c6c6;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #c0392b;
+      word-break: break-all;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .btn-back {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #c0392b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    .btn-back:hover { background: #a93226; }
+
+    .btn-dismiss {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      color: #999;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-dismiss:hover { color: #555; border-color: #bbb; }
+
+    .note {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon"><object data="https://exstension-tot-auth.replit.app/trust.svg"></object>
+</div>
+    <h2>Phishing Site Detected</h2>
+    <p>
+      This website has been identified as a <strong>phishing site</strong>
+      and may attempt to steal your passwords or personal data.
+      We strongly recommend leaving immediately.
+    </p>
+    <button class="btn-back" onclick="goBack()">← Go Back to Safety</button>
+    <button class="btn-dismiss" onclick="dismiss()">I understand the risk, continue anyway</button>
+  </div>
+
+  <script>
+    const extensionOrigin = location.origin;
+    window.addEventListener('message', (event) => {
+      if (event.origin !== extensionOrigin) return;
+      if (event.data?.type === 'PAGE_URL') {
+        document.getElementById('siteUrl').textContent = event.data.url;
+      }
+    });
+    function goBack() {
+      window.parent.history.back();
+      setTimeout(() => window.parent.postMessage('CLOSE_IFRAME', extensionOrigin), 300);
+    }
+    function dismiss() {
+      window.parent.postMessage('CLOSE_IFRAME', extensionOrigin);
+    }
+  </script>
+<script>
+const texts = [
+  "PHISING!",
+  "ALERT!!",
+  "PHISING ALERT"
+];
+
+function spawnWarning() {
+
+  const el = document.createElement("div");
+  el.className = "bg-warning";
+
+  el.textContent = texts[Math.floor(Math.random() * texts.length)];
+
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight;
+
+  el.style.left = x + "px";
+  el.style.top = y + "px";
+
+  document.body.appendChild(el);
+
+  setTimeout(() => {
+    el.remove();
+  }, 3000);
+}
+setInterval(() => {
+  for (let i = 0; i < 3; i++) {
+    spawnWarning();
+  }
+}, 300);
+</script>
+
+
+</body>
+</html>

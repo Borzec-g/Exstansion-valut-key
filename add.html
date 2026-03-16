@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./css/add.css" />
+  <title>VaultKey</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logoplus">
+      <div class="plus">
+        <button class="btn">
+          <a href="home.html">
+            <svg height="40px" width="auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#1c71d8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path style="fill:#1c71d8;" d="M3.919,243.077c-0.223,0.33-0.414,0.675-0.618,1.015c-0.186,0.31-0.382,0.614-0.552,0.936 c-0.186,0.349-0.346,0.709-0.514,1.066c-0.157,0.332-0.321,0.658-0.464,0.998c-0.144,0.349-0.261,0.706-0.388,1.06 c-0.129,0.362-0.268,0.718-0.38,1.089c-0.107,0.358-0.188,0.721-0.279,1.085c-0.093,0.374-0.199,0.743-0.275,1.125 c-0.084,0.422-0.133,0.849-0.194,1.275c-0.047,0.326-0.109,0.645-0.143,0.976c-0.15,1.53-0.15,3.07,0,4.6 c0.034,0.33,0.096,0.65,0.143,0.976c0.061,0.425,0.11,0.853,0.194,1.275c0.076,0.382,0.18,0.749,0.275,1.125 c0.092,0.362,0.171,0.726,0.279,1.085c0.112,0.369,0.251,0.726,0.38,1.089c0.127,0.354,0.244,0.711,0.388,1.06 c0.143,0.34,0.307,0.666,0.464,0.998c0.168,0.355,0.327,0.715,0.514,1.064c0.171,0.321,0.366,0.625,0.552,0.936 c0.203,0.34,0.394,0.684,0.618,1.015c0.234,0.351,0.493,0.68,0.745,1.015c0.205,0.272,0.393,0.549,0.608,0.813 c0.489,0.596,1.002,1.168,1.548,1.711l116.36,116.36c4.544,4.544,10.501,6.817,16.455,6.817c5.956,0,11.913-2.271,16.455-6.817 c9.089-9.089,9.089-23.824,0-32.912l-76.636-76.636h409.272c12.853,0,23.273-10.42,23.273-23.273 c0-12.853-10.42-23.273-23.273-23.273H79.456l76.636-76.636c9.089-9.089,9.089-23.824,0-32.912c-9.087-9.089-23.824-9.089-32.912,0 L6.82,239.538c-0.546,0.543-1.06,1.116-1.548,1.711c-0.216,0.264-0.403,0.541-0.608,0.813 C4.412,242.397,4.153,242.726,3.919,243.077z"></path></g></svg>
+          </a>
+        </button>
+      </div>
+      <div class="logo">
+        <img src="https://i.postimg.cc/zvTqf9xz/logo.png" alt="Logo" class="srclogo">
+      </div>
+    </div>
+
+    <div style="margin-bottom: 3px;"></div>
+    <hr class="line">
+    <div style="margin-bottom: 10px;"></div>
+
+    <label class="lbl">Name (Optional)</label>
+    <input id="label" class="inputname" placeholder="Gmail" value=""/>
+
+    <label class="lbl" id="lablekey">Enter Key</label>
+    <textarea id="secret" class="ta" placeholder="JBSWY3DPEHPK3PXP"></textarea>
+
+    <div class="row">
+      <button id="save" class="btnn">Save</button>
+      <button id="clear" class="btnn btn2">Clear</button>
+    </div>
+
+    <div class="card">
+      <div class="code" id="code">------</div>
+      <div class="subrow">
+        <div class="timer">
+          <span class="textupdate">Update in:</span> <b id="left">--</b>s
+        </div>
+        <button id="copy" class="btnn btn3">
+          <svg width="30px" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 11C6 8.17157 6 6.75736 6.87868 5.87868C7.75736 5 9.17157 5 12 5H15C17.8284 5 19.2426 5 20.1213 5.87868C21 6.75736 21 8.17157 21 11V16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H12C9.17157 22 7.75736 22 6.87868 21.1213C6 20.2426 6 18.8284 6 16V11Z" stroke="#1c71d8" stroke-width="1.5"></path><path d="M6 19C4.34315 19 3 17.6569 3 16V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H15C16.6569 2 18 3.34315 18 5" stroke="#1c71d8" stroke-width="1.5"></path></g></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/vk_otp.js"></script>
+  <script src="./js/vk_ui.js"></script>
+</body>
+</html>
